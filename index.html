@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Tour Guide</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Menghubungkan JavaScript -->
+    <script defer src="script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f400;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explore Bali with SatriaParadiseTour</h1>
+        <p>Temukan keindahan Bali dengan tour guide profesional</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#tours">Paket Tour</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>Mengapa Memilih Kami?</h2>
+        <p>Kami menawarkan pengalaman tak terlupakan dengan tour guide berpengalaman dan ramah yang siap membawa Anda ke tempat-tempat terbaik di Bali.</p>
+    </section>
+
+
+            <section id="tours">
+                <h2>Paket Tour</h2>
+                <div class="tour-container">
+                    <div class="tour-card" onclick="showDetails('Pantai Bali', 'Jelajahi pantai eksotis dan keindahan bawah laut di Bali dengan pemandu dan captain boot terbaik.', 'Rp 500.000')">
+                        <img src="dolfin.JPEG" alt="Pantai Bali">
+                        <h3>Tour Pantai Dolphin dan Snorkeling</h3>
+                        <p>Jelajahi pantai eksotis dan keindahan bawah laut di Bali dengan pemandu dan captain boot terbaik.</p>
+                        <p class="price">Harga: Rp 1.500.000</p>
+                    </div>
+            
+                    <div class="tour-card" onclick="showDetails('Budaya Bali', 'Kenali budaya Bali yang kaya dari dekat dan pengalaman baru dengan perjalanan spesial kami.', 'Rp 600.000')">
+                        <img src="budaya.JPEG" alt="Budaya Bali">
+                        <h3>Tour Budaya</h3>
+                        <p>Kenali budaya Bali yang kaya dari dekat dan pengalaman baru dengan perjalanan spesial kami.</p>
+                        <p class="price">Harga: Rp 2.500.000</p>
+                    </div>
+            
+                    <div class="tour-card" onclick="showDetails('Gunung Batur', 'Nikmati pemandangan matahari terbit dari Gunung Batur.', 'Rp 750.000')">
+                        <img src="gunung.JPEG" alt="Gunung Batur">
+                        <h3>Tour Gunung</h3>
+                        <p>Rasakan sensasi mendaki Gunung Batur dan saksikan matahari terbit yang menakjubkan dari puncaknya!.</p>
+                        <p class="price">Harga: Rp 2.250.000</p>
+                    </div>
+            
+                    <div class="tour-card" onclick="showDetails('Ubud Bali', 'Jelajahi keindahan alam dan seni di Ubud.', 'Rp 550.000')">
+                        <img src="UBUD.JPEG" alt="Ubud Bali">
+                        <h3>Tour Ubud</h3>
+                        <p>Jelajahi keindahan alam Ubud dengan suasana pedesaan yang asri dan nyaman.</p>
+                        <p class="price">Harga: Rp 1.700.000</p>
+                    </div>
+            
+                    <div class="tour-card" onclick="showDetails('Nusa Penida', 'Kunjungi pulau eksotis Nusa Penida.', 'Rp 850.000')">
+                        <img src="nusa_penida.JPEG" alt="Nusa Penida">
+                        <h3>Tour Nusa Penida</h3>
+                        <p>Kunjungi pulau eksotis Nusa Penida.</p>
+                        <p class="price">Harga: Rp 2.000.000</p>
+                    </div>
+            
+                    <div class="tour-card" onclick="showDetails('Kuliner Bali', 'Rasakan kelezatan kuliner khas Bali.', 'Rp 450.000')">
+                        <img src="kuliner.JPEG" alt="Kuliner Bali">
+                        <h3>Tour Kuliner</h3>
+                        <p>Rasakan kelezatan kuliner khas Bali.</p>
+                        <p class="price">Harga: Rp 1.500.000</p>
+                    </div>
+                </div>
+            </section>
+            
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <p id="form-message" style="display:none; color:rgb(0, 128, 0);">Pesan Anda telah terkirim!</p>
+
+            <div class="contact-info">
+                <h3>Hubungi admin</h3>
+                <p><strong>Nama:</strong>  Aldi Rama </p>
+                <p><strong>Email:</strong> satriaparadise8@gmail.com</p>
+                <p><strong>Telepon:</strong> +6285238862877</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SatriaParadise Tour Guide. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('form-message').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('form-message').style.display = 'none';
+            }, 3000);
+            this.reset();
+        });
+
+        function showDetails(title, description) {
+            alert(title + "\n" + description);
+        }
+    </script>
+
+</body>
+</html>
+
+
+    </script>
+</body>
+</html>
+
+<img src="emote-removebg-preview.png" alt="Balinese Couple" class="avatar">
+
+
+<script>
+    document.querySelector('.avatar').addEventListener('click', function() {
+        alert('Om Swastiastu! Selamat datang di Bali Tour!');
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function showGreeting() {
+        Swal.fire({
+            title: "Halo! 👋",
+            text: "Apakah ada yang ingin Anda tanyakan?",
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonText: "Ya, saya ingin bertanya!",
+            cancelButtonText: "Tidak, terima kasih"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire("Silakan tanyakan apa yang ingin Anda ketahui!", "", "success");
+            }
+        });
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js" defer></script>
+<img src="emote-removebg-preview.png" alt="Balinese Couple Emote" class="avatar">
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking & Pemesanan</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            background: #ffebcd; 
+        }
+        .btn { 
+            background: #ff4500; 
+            color: white; 
+            width: 150px; 
+            height: 50px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 10px; 
+            font-size: 18px; 
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 20px auto;
+        }
+        .btn:hover { 
+            background: #ff6600; 
+            transform: scale(1.1); 
+            transition: 0.3s; 
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: #ff4500; text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">Booking Sekarang</h2>
+    <button class="btn" onclick="showBookingForm()">Book Now</button>
+    
+    <script>
+        function showBookingForm() {
+            Swal.fire({
+                title: 'Isi Detail Pemesanan',
+                html: `
+                    <label style="display:block; text-align:left; margin-bottom:5px;">Nama:</label>
+                    <input type="text" id="name" class="swal2-input" placeholder="Masukkan Nama">
+                    <label style="display:block; text-align:left; margin-top:10px; margin-bottom:5px;">Email:</label>
+                    <input type="email" id="email" class="swal2-input" placeholder="Masukkan Email">
+                    <label style="display:block; text-align:left; margin-top:10px; margin-bottom:5px;">Tanggal Booking:</label>
+                    <input type="date" id="bookingDate" class="swal2-input">
+                `,
+                showCancelButton: true,
+                confirmButtonText: 'Konfirmasi Booking',
+                cancelButtonText: 'Batal',
+                confirmButtonColor: '#ff4500',
+                focusConfirm: false,
+                preConfirm: () => {
+                    let name = document.getElementById('name')?.value.trim();
+                    let email = document.getElementById('email')?.value.trim();
+                    let bookingDate = document.getElementById('bookingDate')?.value;
+    
+                    if (!name || !email || !bookingDate) {
+                        Swal.showValidationMessage('Harap isi semua kolom!');
+                        return false;
+                    }
+    
+                    return { name, email, bookingDate };
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Terima Kasih!',
+                        text: `Pesanan atas nama ${result.value.name} telah dikonfirmasi untuk tanggal ${result.value.bookingDate}. Kami akan segera menghubungi Anda!`,
+                        icon: 'success'
+                    }).catch(error => {
+                        console.error("SweetAlert Error:", error);
+                        alert("Terjadi kesalahan! Silakan coba lagi.");
+                    });
+                }
+            }).catch(error => {
+                console.error("SweetAlert Dialog Error:", error);
+            });
+        }
+    </script>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <script>
+     emailjs.init("6BIDbkLKrdmnGwCP0"); // Ganti dengan User ID dari EmailJS
+ </script>
+    
+
+
+<a href="https://wa.me/+6285238862877?text=Halo,%20im%20looking for%20booking%20tour%20Bali!" 
+   class="whatsapp-button" target="_blank">
+   Booking via WhatsApp
+</a>
+
+
+
+
+
+<div class="carousel">
+    <div class="carousel-images">
+        <img src="bali.3.jpg" alt="Gambar 1">
+        <img src="bali.3.jpg" alt="Gambar 2">
+        <img src="bali.3.jpg" alt="Gambar 3">
+        <img src="bali.3.jpg" alt="Gambar 4">
+    </div>
+</div>

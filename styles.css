@@ -1,0 +1,581 @@
+/* Styling untuk Paket Tour */
+.tour-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.tour-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Styling untuk Kontak */
+#contact {
+    background: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#contact-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.contact-info {
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling Form */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+/* Import Font Bali Style */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@400;700&display=swap');
+
+/* Warna Utama dengan Nuansa Bali */
+:root {
+    --primary-color: #FF9800; /* Oranye khas Bali */
+    --secondary-color: #795d00; /* Hijau toska */
+    --background-color: #FFF3E0; /* Warna krem lembut */
+    --text-color: #333;
+}
+
+/* Body */
+body {
+    background-color: var(--background-color);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+}
+
+/* Navigasi */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: var(--secondary-color);
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Bagian Tentang */
+#about {
+    text-align: center;
+    padding: 50px 20px;
+    background: #FFD54F;
+}
+
+#about h2 {
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    color: var(--text-color);
+}
+
+/* Bagian Paket Tour */
+#tours {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.tour-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tour-card {
+    background: white;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.tour-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tour-card h3 {
+    color: var(--primary-color);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.tour-card p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+}
+
+/* Bagian Kontak */
+#contact {
+    background: var(--secondary-color);
+    color: rgba(255, 255, 255, 0);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Formulir Kontak */
+#contact-form input, #contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background: var(--primary-color);
+    color: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+#contact-form button:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: var(--primary-color);
+    color: rgba(255, 255, 255, 0);
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .tour-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mengubah warna teks identitas kontak menjadi hitam */
+.contact-info p {
+    color: black;
+}
+
+/* Mengubah warna teks "Hubungi Kami" menjadi hitam */
+.contact-info h3 {
+    color: black;
+}
+
+/* Sunset Theme for Website */
+body {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: rgba(255, 94, 77, 0.9);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 165, 77, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Sunset-Themed Tour Section */
+.package-tour {
+    background: url('https://source.unsplash.com/1600x900/?bali,sunset,beach') no-repeat center center/cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* Buttons */
+.btn {
+    background: #ff4500;
+    color: white;
+    width: 140px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #ff6600;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 69, 0, 0.9);
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.avatar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;  /* Sesuaikan ukuran */
+    height: auto;
+    z-index: 1000; /* Pastikan tetap di atas elemen lain */
+    border-radius: 50%; /* Opsional, buat gambar terlihat lebih lembut */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.avatar:hover {
+    transform: scale(1.1); /* Efek membesar saat hover */
+    cursor: pointer;
+}
+.avatar {
+    position: fixed;
+    top: 20px; /* Jarak dari atas */
+    right: 20px; /* Jarak dari kanan */
+    width: 150px; /* Ukuran lebih besar */
+    height: auto; /* Menjaga rasio gambar */
+    z-index: 9999; /* Memastikan selalu di atas */
+    pointer-events: none; /* Agar tidak mengganggu interaksi */
+}
+.avatar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+    z-index: 9999;
+    cursor: pointer;
+}
+.tour-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 126, 95, 0.9);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+
+header {
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.wa-button {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Tambahan CSS untuk ornamen bunga kamboja dan font yang lebih menarik */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.kamboja {
+    position: absolute;
+    width: 100px;
+    opacity: 0.8;
+}
+
+.kamboja.left {
+    left: 10px;
+    top: 10px;
+    transform: rotate(-15deg);
+}
+
+.kamboja.right {
+    right: 10px;
+    top: 10px;
+    transform: rotate(15deg);
+}
+
+.kamboja.bottom-left {
+    left: -20px;
+    bottom: -20px;
+    transform: rotate(30deg);
+    width: 120px;
+}
+
+.kamboja.bottom-right {
+    right: -20px;
+    bottom: -20px;
+    transform: rotate(-30deg);
+    width: 120px;
+}
+
+/* Swiper untuk slideshow di atas tombol booking */
+.swiper-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Menampilkan beberapa gambar dalam satu baris */
+.swiper-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+    width: calc(33.333% - 10px); /* Menampilkan 3 gambar dalam satu baris */
+    margin-right: 10px;
+}
+
+.swiper-slide:last-child {
+    margin-right: 0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: rgb(0, 157, 255);
+}
+
+
+.price {
+    font-weight: bold;
+    color: #ff4500;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366; /* Warna hijau khas WhatsApp */
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE57; /* Warna hijau lebih gelap saat dihover */
+}
+
+
+.carousel {
+    width: 90%; /* Menyesuaikan layar */
+    max-width: 900px; /* Ukuran maksimal */
+    height: 200px; /* Tidak terlalu besar */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    width: 400%;
+    animation: slide 12s infinite ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Biar foto tetap proporsional */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
